@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body class="main">
+    <div class="campo">
+        <canvas id="myChart"></canvas>
+    </div>
+    <div class="campo">
+        <canvas id="myChart2"></canvas>
+    </div>
+</body>
+</html>
+<script>
+    const labels = ['13:00', '14:00', '15:00', '16:00', '17:00'];
+
+
+    const data = {
+        labels: labels,
+        datasets: [{
+            label: 'My First Dataset',
+            data: [30,29,28,25,22,23],
+            backgroundColor: 'rgb(75, 192, 192)',
+            borderColor: 'rgb(80, 00, 192)',
+            tension: 0.1
+        }]
+        
+    };
+    const config = {
+        type: 'line',
+        data: data
+    };
+    const myChart = new Chart(
+        document.getElementById('myChart'),
+        config
+    );
+      const labels2 = 
+      ['13:00', '14:00', '15:00', '16:00', '17:00'];
+
+    const dataa= {
+        labels: labels2,
+        datasets: [{
+            label: 'My First Dataset',
+            data: [30,29,28,25,22,23],
+            backgroundColor: 'rgb(75, 192, 192)',
+            borderColor: 'rgb(75, 192, 192)',
+            tension: 0.1
+        }]
+    };
+
+    const data2 = { 
+        labels: labels2,
+        datasets: [{    
+            label: 'Grafaico de barras ',
+            data: [80, 82, 80, 85, 80, 82],
+            backgroundColor: 'rgb(980, 000, 192)',
+            borderColor: 'rgb(990, 000, 000)',
+            tension: 0.1
+        }]  
+    }; 
+    const config2 = {
+        type: 'bar',
+        data: data2
+    };
+    const myChart2 = new Chart(
+        document.getElementById('myChart2'),
+        config2
+    );
+</script>

@@ -1,0 +1,11 @@
+.main{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.campo{
+    margin: 20px;
+    width: 800px;
+    height: 800px;
+}
